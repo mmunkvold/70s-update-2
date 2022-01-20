@@ -551,7 +551,7 @@ hr {
 }
 
 .icon-container {
-  margin: 1em;
+  margin: 1em 1em 1.3em;
 }
 /* See here how to correctly make a tooltip: https://codepen.io/smhigley/pen/KjoerX */
 
@@ -564,6 +564,7 @@ hr {
 }
 
 .dropcap {
+  /* NB! style to fit the theme */
   float: left;
   font-family: inherit;
   font-size: 50px;
