@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/ff8ec4a7db.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&display=swap" rel="stylesheet" />
+
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Small Furniture and Products | The 70's Home</title>
+  </head>
+  <body>
+    <header class="navbar-wrapper">
+      <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+          <div>
+            <a class="navbar-brand" href="index.html"> The 70'<span class="small-txt">s</span> Home</a>
+            <p class="slogan">Retro Home Decor Shop</p>
+          </div>
+          <ul class="navbar-nav" id="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="page.html">Living Space Ideas</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Small Furniture and Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item hide"><a class="nav-link" href="#">Contact us</a></li>
+          </ul>
+          <div class="navbar-right">
+            <a class="navbar-button hide-btn" href="#">Contact us</a>
+            <button class="navbar-toggle" id="navbar-toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="icon-container">
+      <img class="icon" src="img/icon/favourite_small.png" alt="wish list" title="go to wishlist" />
+      <img class="icon shopping-icon" src="img/icon/shopping-bag_small.png" alt="shopping cart" title="go to shopping cart" />
+    </div>
+    <main class="main-wrapper">
+      <section class="hero">
+        <div class="container">
+          <h1>The Flowery Series</h1>
+        </div>
+      </section>
+      <section>
+        <div class="container flex-container">
+          <div class="wrapper">
+            <div class="row">
+              <div class="col">
+                <img id="expandedImg" class="img" src="img/product/flowery-couch-lifestyle.jpg" alt="two-seater flowery couch in 70's style" />
+                <div class="img-container">
+                  <div class="col detail-col">
+                    <img
+                      class="img detail-img"
+                      src="img/product/flowery-couch-front.jpg"
+                      alt="two-seater flowery couch seen from front in 70's style"
+                      onclick="showImg(this);"
+                      onkeypress="showImg(this);"
+                      tabindex="0"
+                    />
+                    <div id="imgtext"></div>
+                  </div>
+                  <div class="col detail-col">
+                    <img
+                      class="img detail-img"
+                      src="img/product/flowery-couch-edge-detail.jpg"
+                      alt="close-up of a two-seater flowery couch in 70's style"
+                      onclick="showImg(this);"
+                      onkeypress="showImg(this);"
+                      tabindex="0"
+                    />
+                  </div>
+                  <div class="col detail-col">
+                    <img
+                      class="detail-img"
+                      src="img/product/flowery-couch-side.jpg"
+                      alt="two-seater flowery couch seen from the side in 70's style"
+                      onclick="showImg(this);"
+                      onkeypress="showImg(this);"
+                      tabindex="0"
+                    />
+                  </div>
+                  <div class="col detail-col">
+                    <img
+                      class="detail-img"
+                      src="img/product/flowery-couch-back.jpg"
+                      alt="two-seater flowery couch seen from the back in 70's style"
+                      onclick="showImg(this);"
+                      onkeypress="showImg(this);"
+                      tabindex="0"
+                    />
+                  </div>
+                  <div class="col detail-col">
+                    <img
+                      class="img detail-img"
+                      src="img/product/flowery-couch-pattern-detail.jpg"
+                      alt="close-up of a flowery fabric pattern in 70's style"
+                      onclick="showImg(this);"
+                      onkeypress="showImg(this);"
+                      tabindex="0"
+                    />
+                  </div>
+                  <div class="col detail-col">
+                    <img
+                      class="img detail-img"
+                      src="img/product/flowery-couch-lifestyle.jpg"
+                      alt="two pieces of a two-seater flowery couch in 70's style"
+                      onclick="showImg(this);"
+                      onkeypress="showImg(this);"
+                      tabindex="0"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <h2>Flowery Couch 2-seater</h2>
+                <p>
+                  This lovely couch is part of a series, the Flowery Series. It comes in different sizes so it is easy for you to decorate your living
+                  space like you want to.
+                </p>
+                <p>This pattern is very popular, it is made in wowen fabric, and it is resiliant against stains. It is easy to clean.</p>
+                <p><strong>Price: $129,-</strong></p>
+                <button class="buy-btn">Add to cart<img class="icon shopping-icon" src="img/icon/shopping-bag_small.png" alt="" /></button>
+                <img class="icon" src="img/icon/favourite_small_red.png" alt="" />
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col">
+                <h3>Product Information</h2>
+                <p>
+                  All items in this series are light-weight, so you can easily moved them around. The quality hasn't suffered from this, and these are
+                  made to last a long time.
+                </p>
+              </div>
+              <div class="col">
+                <h3>Available Sizes:</h3>
+                <ul>
+                  <li>- 2-seater</li>
+                  <li>- 3-seater</li>
+                  <li>- Lounge Chair</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3>Assembly Instruction</h3>
+                <p>The items in this series come ready-to-use. No need for any assembling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-col">
+            <a href="index.html">© 2021 The 70's Home</a>
+          </div>
+        </div>
+        <div class="footer-row">
+          <div class="footer-col">
+            <a class="credit" href="https://www.transparenttextures.com/">Low Contrast Linen Made by Jordan Pittman</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

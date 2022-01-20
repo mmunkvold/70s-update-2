@@ -1,0 +1,673 @@
+@font-face {
+  font-family: "chicleregular";
+  src: url("../fonts/webfontkit-20220106-061940/chicle-regular-webfont.woff2") format("woff2"),
+    url("../fonts/webfontkit-20220106-061940/chicle-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "a_abstract_groovyregular";
+  src: url("../fonts/webfontkit-20220106-064638/abstractgroovy-k7zdy-webfont.woff2") format("woff2"),
+    url("../fonts/webfontkit-20220106-064638/abstractgroovy-k7zdy-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+:root {
+  --bg-color: rgba(242, 192, 44, 0.702);
+  --primary-color: #502d25;
+  --secondary-color: rgb(36, 79, 68);
+  --orange-color: rgb(242, 133, 38);
+  --yellow-color: #f2c12e;
+  --light-color: rgb(245, 245, 245);
+  --dark-color: #000;
+  --grey-color: #666;
+  --red-color: rgb(220, 60, 46);
+  --font-color: #222;
+  --ff-logo: "a_abstract_groovyregular", sans-serif;
+  --ff-h: "chicleregular", sans-serif;
+  --ff-p: arial, sans-serif;
+  --fs-h1: 2.4rem;
+  --fs-h2: 1.8rem;
+  --fs-h3: 1.5rem;
+  --fs-p: 1rem;
+  --border-radius: 13px;
+  --box-shadow: 0px 2px 2px -2px #666;
+}
+
+body {
+  font-family: var(--ff-p);
+  font-size: var(--fs-p);
+  font-weight: lighter;
+  color: var(--dark-color);
+  line-height: 1.6;
+  position: relative;
+  background-color: #f2c12e;
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='32' viewBox='0 0 48 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23502d25' fill-opacity='0.04'%3E%3Cpath d='M27 32c0-3.314 2.686-6 6-6 5.523 0 10-4.477 10-10S38.523 6 33 6c-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 6.627 0 12 5.373 12 12s-5.373 12-12 12c-2.21 0-4 1.79-4 4h-2zm-6 0c0-3.314-2.686-6-6-6-5.523 0-10-4.477-10-10S9.477 6 15 6c3.314 0 6-2.686 6-6h-2c0 2.21-1.79 4-4 4C8.373 4 3 9.373 3 16s5.373 12 12 12c2.21 0 4 1.79 4 4h2z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.navbar-brand,
+footer {
+  font-family: var(--ff-logo);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--border-radius);
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: var(--ff-h);
+  font-size: var(--fs-h1);
+  margin: 0.1em 0 0.05em;
+  text-shadow: 0px 1px 1px #fff;
+}
+
+h2 {
+  font-family: var(--ff-p);
+  font-size: var(--fs-h2);
+  margin-top: 0;
+}
+
+h1,
+h2,
+strong {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Links and buttons
+------------------------------------*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:focus {
+  outline: 2px solid var(--light-color);
+  outline-offset: 3px;
+}
+
+.current {
+  border-bottom: 2px solid currentColor;
+}
+
+button {
+  max-width: 150px;
+  background: var(--orange-color);
+  color: var(--dark-color);
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+  padding: 0.5em;
+  margin: 0;
+  text-transform: lowercase;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  box-shadow: unset;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.buy-btn:hover {
+  background: rgba(242, 133, 38, 0.8);
+}
+
+.save-btn {
+  background: var(--secondary-color);
+  color: var(--light-color);
+  margin-top: 1em;
+}
+
+.save-btn:hover {
+  background: rgba(36, 79, 68, 0.8);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Section HEADER
+------------------------------------*/
+header {
+  background: var(--primary-color);
+  background-image: url("../img/bg/low-contrast-linen.png");
+  padding: 1em;
+  border-bottom: 2px solid var(--light-color);
+}
+
+.navbar-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  gap: 10px;
+  align-items: center;
+  max-width: 1140px;
+  padding: 0 12px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-brand {
+  justify-self: start;
+  padding: 5px 0px;
+  margin-right: 30px;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--orange-color);
+}
+
+.navbar-brand:hover {
+  color: var(--light-color);
+}
+
+.navbar-nav {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 12px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.15;
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+.nav-link:hover {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  color: var(--dark-color);
+}
+
+.navbar-nav.show {
+  display: inline-block;
+}
+
+.navbar-right {
+  justify-self: end;
+}
+
+.navbar-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-left: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.15;
+  text-decoration: none;
+  color: var(--light-color);
+  border: 2px solid var(--light-color);
+  border-radius: var(--border-radius);
+}
+
+.navbar-button:hover {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  color: var(--dark-color);
+}
+.navbar-toggle {
+  display: none;
+}
+
+/* Section HERO
+------------------------------------*/
+.hero {
+  padding: 2em 0;
+  text-align: center;
+}
+
+.hero-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Section IMAGE-GRID Homepage
+------------------------------------*/
+
+.container {
+  max-width: 1140px;
+  padding: 0 12px;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 1.5em;
+  margin: 0 -12px;
+}
+
+.card {
+  border: 7px solid #4f2c24;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  margin: 0.5em;
+}
+
+.card-content {
+  color: var(--light-color);
+  margin-top: 20em;
+  text-align: center;
+}
+
+.img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.img1 {
+  background-image: url("../img/man-on-couch.jpg");
+}
+
+.img2 {
+  background-image: url("../img/tv-bluewall.jpg");
+}
+
+.img3 {
+  background-image: url("../img/phone.jpg");
+}
+
+.img4 {
+  background-image: url("../img/living-room.jpg");
+}
+
+/* Living Space Ideas Page
+------------------------------------*/
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 12px;
+}
+
+.flex-container-txt {
+  margin: 0 auto;
+}
+
+.row {
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.row > * {
+  margin-top: 1em;
+  padding: 0 12px;
+}
+
+.col {
+  flex: 1 0 0%;
+  padding: 0 12px;
+  margin: 0 1em 2em 0;
+}
+
+.wrapper {
+  background: var(--light-color);
+  border-radius: var(--border-radius);
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+.wrapper::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* Product Page
+------------------------------------*/
+.result-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product {
+  flex: 1 1 3rem;
+  min-width: 300px;
+  margin: 2em 0.5em;
+  padding: 0.5em;
+  position: relative;
+  border-radius: var(--border-radius);
+}
+
+.product-img {
+  width: 350px;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(0%) drop-shadow(10px 10px 10px grey);
+}
+
+.product-img:hover {
+  filter: grayscale(100%);
+}
+
+.main-product-img {
+  min-width: 300px;
+  filter: sepia(40%) drop-shadow(10px 10px 10px #502d25);
+}
+
+/* Detail Page
+------------------------------------*/
+
+.detail-col {
+  padding: 0;
+}
+
+.detail-col img:hover {
+  cursor: pointer;
+  filter: grayscale(100%);
+  outline: 2px solid var(--orange-color);
+}
+
+.detail-col img:focus {
+  outline: 2px solid var(--orange-color);
+}
+
+.img-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.detail-img {
+  max-width: 100%;
+  margin: 1.5em 0 0;
+  border: 1px solid var(--light-color);
+  border-radius: 1px;
+}
+
+/* About Page
+------------------------------------*/
+
+.about-container {
+  max-width: 1140px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.about-container div {
+  max-width: 250px;
+  background: var(--light-color);
+  border: unset;
+  text-align: center;
+  padding: 1em;
+  margin: 2em auto;
+}
+
+.about-title {
+  font-weight: bold;
+}
+
+.contact-img {
+  min-width: 200px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* Contact Page
+------------------------------------*/
+
+#contact-form {
+  max-width: 400px;
+  background: var(--light-color);
+  margin: 0 auto;
+  padding: 2em;
+  font-family: inherit;
+  border: 2px solid var(--grey-color);
+  border-radius: var(--border-radius);
+}
+
+/* Section FOOTER
+------------------------------------*/
+
+footer {
+  margin-top: 10em;
+  padding: 0.2em 0.2em 1em;
+  text-align: center;
+  background: var(--secondary-color);
+  background-image: url("../img/bg/low-contrast-linen.png");
+  color: var(--light-color);
+}
+
+.footer-col,
+.footer-row {
+  padding-top: 0.5em;
+}
+
+/* Miscellanous
+  ------------------------------------*/
+hr {
+  color: var(--light-color);
+}
+
+.slogan {
+  color: var(--light-color);
+  font-size: smaller;
+  letter-spacing: 0.2em;
+  padding: 0;
+  margin: 0;
+}
+
+.hide {
+  display: block;
+}
+
+.hide-btn {
+  display: none;
+}
+
+.credit {
+  font-family: sans-serif;
+  font-size: small;
+  color: var(--light-color);
+  overflow: hidden;
+}
+
+.small-txt {
+  font-size: small;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.overlay,
+.overlay-dark {
+  line-height: normal;
+  padding: 1px;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--dark-color);
+}
+
+.overlay-dark {
+  background: var(--primary-color);
+  background-image: url("../img/bg/low-contrast-linen.png");
+  color: var(--light-color);
+}
+
+.icon {
+  width: 40px;
+  margin: 0;
+  float: right;
+  border-radius: unset;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.shopping-icon {
+  width: 23px;
+  padding: 0 0 0 0.4em;
+}
+
+.shopping-icon:hover {
+  transform: none;
+}
+
+.icon-container {
+  margin: 1em;
+}
+/* See here how to correctly make a tooltip: https://codepen.io/smhigley/pen/KjoerX */
+
+.icon-container .icon {
+  width: 30px;
+}
+
+.icon-container .icon:hover {
+  transform: scale(1.1);
+}
+
+.dropcap {
+  float: left;
+  font-family: inherit;
+  font-size: 50px;
+  line-height: 45px;
+  padding-top: 4px;
+  padding-right: 4px;
+  padding-left: 0;
+}
+
+/* MEDIA QUERIES
+  ------------------------------------*/
+
+@media (min-width: 520px) {
+  .hide {
+    display: none;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .about-container {
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  .img-container {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 720px) {
+  .row {
+    display: flex;
+  }
+}
+
+@media (min-width: 850px) {
+  .img-right {
+    float: right;
+    margin: 1em 1em 1.5em;
+  }
+
+  .img-left {
+    float: left;
+    margin: 1em;
+  }
+}
+
+@media (min-width: 1020px) {
+  .hide-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 1020px) {
+  .navbar-nav {
+    display: none;
+    order: 3;
+    grid-column: 1 / span 3;
+  }
+
+  .nav-item {
+    display: block;
+  }
+
+  .nav-link {
+    display: block;
+  }
+
+  .navbar-right {
+    order: 2;
+    grid-column: 2 / span 2;
+  }
+
+  .navbar-toggle {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0.5em;
+    margin-left: 0.5em;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background: var(--light-color);
+    color: var(--dark-color);
+  }
+
+  .navbar-toggle.show {
+    background: var(--light-color);
+    color: var(--dark-color);
+  }
+
+  .navbar-toggle:hover {
+    background: transparent;
+    border-radius: var(--border-radius);
+    color: var(--light-color);
+    border: 2px solid var(--light-color);
+  }
+
+  .navbar-toggle svg {
+    display: block;
+    margin: 0 auto;
+  }
+}
