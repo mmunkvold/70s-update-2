@@ -558,6 +558,7 @@ hr {
 
 .icon-container {
   margin: 1em 1em 1.3em;
+   max-width: 1140px;
 }
 /* See here how to correctly make a tooltip: https://codepen.io/smhigley/pen/KjoerX */
 
